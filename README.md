@@ -18,10 +18,11 @@
 
 ## hairdressers テーブル
 
-| Column     | Type   | Options     |
-| --------   | ------ | ----------- |
-| name       | string | null: false |
-| profile    | text   | null: false |
+| Column     | Type       | Options           |
+| --------   | ---------- | ----------------- |
+| name       | string     | null: false       |
+| profile    | text       | null: false       |
+| user       | references | foreign_key: true |
 
 ### Association
 
