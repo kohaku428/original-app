@@ -16,6 +16,9 @@ class HairdressersController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
   def hairdresser_params
     params.require(:hairdresser).permit(:name, :profile, :image).merge(user_id: current_user.id)
