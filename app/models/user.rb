@@ -14,4 +14,5 @@ class User < ApplicationRecord
   end
   end
   validates :email, uniqueness: { case_sensitive: false }
+  has_one :hairdresser
 end
