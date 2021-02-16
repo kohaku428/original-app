@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'hairdressers/index'
   root to: "hairdressers#index"
+  resources :hairdressers, only: [:index, :new, :create]
 end
