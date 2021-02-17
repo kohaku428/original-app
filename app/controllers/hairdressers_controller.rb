@@ -17,6 +17,7 @@ class HairdressersController < ApplicationController
   end
 
   def show
+    @hairdresser = Hairdresser.find(params[:id])
   end
 
   private
