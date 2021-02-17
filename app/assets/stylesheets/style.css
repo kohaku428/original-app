@@ -32,7 +32,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #3b4043;
+  color: #a786df;
 }
 
 .header {
@@ -144,6 +144,50 @@ a {
   font-size: 20px;
   margin-bottom: 8px;
   font-weight: bold;
+}
+.hairdresser__wrapper{
+  min-height: calc(100vh - 161px);
+}
+.hairdresser__hedding{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.detail__title{
+  font-size: 20px;
+  font-weight: bold;
+}
+.hairdresser__image{
+  width: 40%;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+.hairdresser__detail{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+.hairdresser__manage{
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+.hairdresser__btn{
+  display: block;
+  padding: 0.4em 1.6em;
+  font-size: 0.4em;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #a786df solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 0 4px;
+}
+.hairdresser__btn:hover{
+  color: #fff;
+  background: #a786df;
 }
 
 .footer {
