@@ -6,7 +6,7 @@
       </p>
       <% if user_signed_in? && current_user.id == @hairdresser.user_id %>
         <div class="hairdresser__manage">
-          <%= link_to "編集する", "#", method: :get, class: :hairdresser__btn %>
+          <%= link_to "編集する", edit_hairdresser_path(@hairdresser.id), method: :get, class: :hairdresser__btn %>
           <%= link_to "削除する", "#", method: :delete, class: :hairdresser__btn %>
         </div>
       <% end %>
