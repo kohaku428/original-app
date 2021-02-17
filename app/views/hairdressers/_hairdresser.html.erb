@@ -1,9 +1,9 @@
 <div class="card">
-  <%= link_to "#", method: :get, class: :card__image do %>
+  <%= link_to hairdresser_path(hairdresser.id), method: :get, class: :card__image do %>
   <%= image_tag hairdresser.image %>
   <% end %>
   <div class="card__body">
-    <%= link_to "#", method: :get, class: :card__name do %>
+    <%= link_to hairdresser_path(hairdresser.id), method: :get, class: :card__name do %>
     <%= hairdresser.name %>
     <% end %>
   </div>
