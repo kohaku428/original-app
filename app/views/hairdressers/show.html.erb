@@ -1,0 +1,26 @@
+<main class="main">
+  <div class="inner">
+    <div class="hairdresser__wrapper">
+      <p class="hairdresser__hedding">
+        <%= @hairdresser.name %>
+      </p>
+      <% if user_signed_in? && current_user.id == @hairdresser.user_id %>
+        <div class="hairdresser__manage">
+          <%= link_to "編集する", "#", method: :get, class: :hairdresser__btn %>
+          <%= link_to "削除する", "#", method: :delete, class: :hairdresser__btn %>
+        </div>
+      <% end %>
+      <div class="hairdresser__image">
+        <%= image_tag @hairdresser.image %>
+      </div>
+      <div class="hairdresser__body">
+        <div class="hairdresser__detail">
+          <p class="datail__title">(プロフィール)</p>
+          <p class="detail__message">
+            <%= @hairdresser.profile %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
