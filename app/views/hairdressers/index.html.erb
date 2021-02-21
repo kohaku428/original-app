@@ -1,8 +1,12 @@
 <main class="main">
   <div class="inner">
+  自宅でヘアーカットサービス<br>美容師が介護施設や自宅を訪問します。  
+  <% if user_signed_in? %>
   <div class="greeting">
-      自宅でヘアーカットサービス<br>美容師が介護施設や自宅を訪問します。  
+     こんにちは、
+     <%= "#{current_user.last_name}さん" %>
   </div>
+  <% end %>
     <div class="card__wrapper">
       <%= render partial: 'hairdresser', collection: @hairdressers %>
     </div>

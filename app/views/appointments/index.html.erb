@@ -1,0 +1,49 @@
+<div class="main">
+  <div class="inner">
+    <div class="form__wrapper">
+      <h2 class="page-heading">予約画面</h2>
+        <%= form_with model: @user_appointment, url: hairdresser_appointments_path, local: true do |f| %>
+          <div class="field">
+            <%= f.label :full_name, "名前（全角）" %>
+            <%= f.text_field :full_name %>
+          </div>
+          <div class="field">
+            <%= f.label :postal_code, "郵便番号（ハイフンを含む）" %>
+            <%= f.text_field :postal_code %>
+          </div>
+          <div class="field">
+            <%= f.label :prefecture_id, "都道府県" %>
+            <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name, {} %>
+          </div>
+          <div class="field">
+            <%= f.label :city, "市町村" %>
+            <%= f.text_field :city %>
+          </div>
+          <div class="field">
+            <%= f.label :house_number, "番地" %>
+            <%= f.text_field :house_number %>
+          </div>
+          <div class="field">
+            <%= f.label :building_name, "建物名（任意）" %>
+            <%= f.text_field :building_name %>
+          </div>
+          <div class="field">
+            <%= f.label :telephone, "電話番号" %>
+            <%= f.text_field :telephone %>
+          </div>
+          <div class="field">
+            <%= f.label :day, "予約日" %>
+            <%= f.date_field :day, class: 'form-control' %>
+           </div>
+           <div class="field">
+            <%= f.label :time, "予約時間" %>
+            <%= f.time_field :time, class: 'form-control' %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "予約する", class: :form__btn %>
+          </div>
+       <% end %>
+    </div>
+  </div>
+</div>
