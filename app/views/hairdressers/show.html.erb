@@ -21,7 +21,7 @@
           </p>
         </div>
       </div>
-    <%= link_to "#", class: 'apo-btn' do %>
+    <%= link_to hairdresser_appointments_path(@hairdresser.id), method: :get, class: 'apo-btn' do %>
       <span class='apo-btn-text'>予約する</span>
       <%= image_tag 'icon_apo.png' , size: '180x50' ,class: "apo-btn-icon" %>
     <% end %>
