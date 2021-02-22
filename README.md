@@ -16,17 +16,17 @@
 
 ## 接続先情報
 
-* URL:
+* URL:https://hairdresser-2021.herokuapp.com/
 * ID/Pass
  * ID: admin
  * Pass: 2222
 * テスト用アカウント等
  * 依頼者用
    * メールアドレス: a@a
-   * パスワード: test11
+   * パスワード: aaaaaa
  * 美容師用
    * メールアドレス名: i@i
-   * パスワード: test11
+   * パスワード: iiiiii
 
 ## 使い方
 
@@ -37,45 +37,14 @@
 * テストアカウントでログイン→トップページから美容師登録ボタン押下→美容師情報入力→美容師登録
 * 確認後、ログアウト処理をお願いします。
 
-## デモ
-
-
-
-
 ## 使用技術（開発環境）
 
-* バックエンド
-
-  * Ruby, Ruby on Rails 
-
-* データベース
-
-  * MySQL, SequelPro
-
-* インフラ
-
-  *
-
-* Webサーバー
-
-  *
-
-* アプリケーションサーバー
-
-  *
-
-* ソース管理
-
-  * GitHub
-
-* エディタ
-
-  * VSCode
+* Ruby / Ruby on Rails / MySQL / GitHub / Heroku / Visual Studio Code 
 
 ## 今後実装したい機能
 
+* 予約済み確認表示機能
 * 地域検索機能
-
   * 住む地域別に美容師を探すことができる検索機能
 
 ## テーブル設計
@@ -115,8 +84,27 @@
 | ----------- | ---------- | ----------------- |
 | user        | references | foreign_key: true |
 | hairdresser | references | foreign_key: true |
+| day         | date       | null: false       |
+| time        | time       | null: false       |
 
 ### Association
 
 - belongs_to :hairdresser
 - belongs_to :user
+- has_one :address
+## address テーブル
+
+| Column        | Type       | Options           |
+| ------------- | ---------- | ----------------- |
+| postal        | string     | null: false       |
+| prefecture_id | integer    | null: false       |
+| city          | string     | null: false       |
+| house_number  | string     | null: false       |
+| building      | string     |                   |
+| telephone     | string     | null: false       |
+| appointment   | references | foreign_key: true |
+| full_name     | string     | null: false       |
+
+### Association
+
+- belongs_to :hairdresser
